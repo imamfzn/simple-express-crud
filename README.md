@@ -2,7 +2,19 @@
 
 ## How To:
 
-### Prepare Docker Network & Volume
+### Running with Docker Compose
+
+Just run:
+
+```bash
+docker-compose up -d
+```
+
+The published port of api will be available on port `4000`.
+
+### Running without Docker Compose
+
+#### Prepare Docker Network & Volume
 
 Create a docker volume:
 
@@ -16,7 +28,7 @@ Create a docker network:
 docker network create <your_network_name>
 ```
 
-### Prepare Mongo DB using Docker
+#### Prepare Mongo DB using Docker
 
 Pull mongodb 4.4 image:
 ```bash
@@ -32,7 +44,7 @@ docker run -d -e MONGO_INITDB_ROOT_USERNAME=<your_user> -e MONGO_INITDB_ROOT_PAS
 Run `docker ps` to make sure your mongodb container is already run
 
 
-### Prepare Application
+#### Prepare Application
 
 1. Clone this repository
 2. Setup env variables:
